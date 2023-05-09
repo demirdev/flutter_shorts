@@ -48,6 +48,12 @@ class _CountDownState extends State<CountDown> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    timer.cancel();
+    super.dispose();
+  }
 }
 
 class TestCountDown extends StatelessWidget {
